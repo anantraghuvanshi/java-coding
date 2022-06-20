@@ -7,7 +7,7 @@ public class Calculator {
         //Taking input from user till the user does not press X or x
 
         while(true){
-
+            System.out.println("Enter the operator");
             char operation = sc.next().trim().charAt(0);
             if (operation == '+' || operation == '-' || operation == '*' || operation == '/' || operation == '%'){
                 System.out.println("Enter number 1");
