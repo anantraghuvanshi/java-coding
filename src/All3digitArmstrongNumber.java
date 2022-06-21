@@ -3,9 +3,11 @@ import java.util.*;
 public class All3digitArmstrongNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        // int n = sc.nextInt();
 
-        System.out.println(isArmstrong(n));
+        for( int i= 100; i<1000; i++){
+            if (isArmstrong(i)) System.out.print(i + " ");
+        }
     }
 
     static boolean isArmstrong(int n){
