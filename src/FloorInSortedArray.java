@@ -33,9 +33,9 @@ public class FloorInSortedArray {
                 start = mid + 1;
             }
             else {
-                return mid;
+                return arr[mid];
             }
         }
-        return end;
+        return arr[end];
     }
 }
