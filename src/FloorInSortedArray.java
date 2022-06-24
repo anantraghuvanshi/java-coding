@@ -1,10 +1,11 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class BinarySearch {
+public class FloorInSortedArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number you wanna find: ");
+        System.out.println("Enter the number: ");
         int target = sc.nextInt();
 
         System.out.println("Enter the size of the array: ");
@@ -14,26 +15,27 @@ public class BinarySearch {
             arr[i] = sc.nextInt();
         }
 
-        System.out.println(binarysearch(arr, target));
+        System.out.println(floor(arr, target));
 
     }
-    public static int binarysearch(int[] arr, int target){
+    public static int floor(int[] arr, int target){
         Arrays.sort(arr);
         int start =0;
         int end = arr.length-1;
 
 
         while(start <= end){
-            int mid = start + (end-start) / 2;// can be written as start + end /2 22but it can sometimes exceed the int range so there will be overflow.
+            int mid = start + (end-start) / 2;
             if (target< arr[mid]){
                 end = mid-1;
             }
             else if(target > arr[mid]){
                 start = mid + 1;
-            } else if (target == arr[mid]) {
+            }
+            else {
                 return mid;
             }
         }
-        return -1;
+        return end;
     }
 }
