@@ -1,5 +1,5 @@
 public class ElementInInfiniteSortedArray{
-    //question from GFG(medium)
+    //https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
     public static void main(String[] args) {
         int[] arr = {3, 5, 6 ,7, 10, 90, 100, 120, 140, 160, 170};
         int target = 10;
