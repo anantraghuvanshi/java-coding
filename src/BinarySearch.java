@@ -18,7 +18,6 @@ public class BinarySearch {
 
     }
     public static int binarysearch(int[] arr, int target){
-        Arrays.sort(arr);
         int start =0;
         int end = arr.length-1;
 
