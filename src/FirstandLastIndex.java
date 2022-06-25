@@ -6,12 +6,21 @@ public class FirstandLastIndex {
 
     }
     public int[] searchRange(int[] nums, int target) {
+
+        int[] ans = {-1, -1};
+
+        int start = search(nums, target, true);
+        int end = search(nums, target, false);
+
+        ans[0] = start;
+        ans[1] = end;
+
+        return ans;
+    }
+    int search(int[] nums, int target, boolean findStartIndex){
+        int ans =-1;
         int start =0;
         int end = nums.length-1;
-
-        if(target > nums[nums.length-1]){
-            return new int[]{-1, -1};
-        }
 
         while(start <= end){
             int mid = start + (end-start) / 2;
@@ -22,9 +31,12 @@ public class FirstandLastIndex {
                 start = mid + 1;
             }
             else {
-                return nums[mid];
+                ans = mid;
+                if (findStartIndex){
+                    end = mid-1;
+                }else start = mid + 1;
             }
         }
-        return nums[start];
+        return ans;
     }
 }
