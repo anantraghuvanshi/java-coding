@@ -31,7 +31,10 @@ public class SearchInRotatedSortedArray {
         if(nums[pivot] == target){
             return pivot;
         }
-
+        if(target >= nums[0]){
+            return binarysearch(nums, target, 0,pivot -1);
+        }
+        return binarysearch(nums, target, pivot + 1, nums.length -1);
     }
     public static int binarysearch(int[] arr, int target, int start, int end){
         while(start <= end){
