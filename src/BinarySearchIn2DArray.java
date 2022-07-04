@@ -8,7 +8,7 @@ public class BinarySearchIn2DArray {
         int row = 0;
         int column = arr.length -1;
 
-        while(row < arr.length && c >=0){
+        while(row < arr.length && column >=0){
             if(arr[row][column] == target){
                 return new int[]{row,column};
             }
